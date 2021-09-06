@@ -52,8 +52,8 @@ let animate = (ctx, images, animation, callback3) => {
     setTimeout(() => {
       ctx.clearRect(0, 0, 500, 500);
       let fn2 = index % 7;
-      //if (fn2 > 6) fn2 = 0;
-      ctx.drawImage(images.punch[fn2], 100, 0, 475, 500);
+    
+     
 
       ctx.drawImage(image, 0, 0, 375, 500);
     }, index * 100)
@@ -81,10 +81,10 @@ loadImages((images) => {
   document.getElementById("forward").onclick = () =>
     quAnimations.push("forward");
   document.getElementById("block").onclick = () => quAnimations.push("block");
-  //quAnimations.push("punch2");
+
 
   document.addEventListener("keyup", (event) => {
-    const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+    const key = event.key; 
 
     if (key === "ArrowLeft") quAnimations.push("kick");
     else if (key === "ArrowRight") quAnimations.push("punch");
